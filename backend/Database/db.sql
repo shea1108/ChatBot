@@ -1,0 +1,12 @@
+CREATE TABLE messages (
+    id_mess SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id_user) ON DELETE CASCADE,
+    content TEXT NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE messages(
+	id_mess Serial PRIMARY KEY,
+	content text NOT NULL,
+	timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
